@@ -180,6 +180,61 @@ Simply open `index.html` in your web browser. However, some features may be limi
 **Total Units**: 198 Residences
 **Towers**: 2
 
+## 🚀 Deployment Instructions
+
+### Option 1: GitHub Pages (Recommended)
+```bash
+# Navigate to project directory
+cd "c:\Users\100acress.com\Documents\GitHub\Dualis"
+
+# Initialize git repository (if not already done)
+git init
+
+# Add all files
+git add .
+
+# Commit changes
+git commit -m "Initial commit: The Dualis luxury real estate website"
+
+# Set up remote repository
+git remote add origin https://github.com/vibhu2208/Dualis.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
+```
+
+### Option 2: Manual Upload
+1. Go to https://github.com/vibhu2208/Dualis
+2. Upload all files from this directory
+3. Enable GitHub Pages in repository settings
+
+### Option 3: Local Development Server
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx http-server -p 8000
+
+# Using PHP
+php -S localhost:8000
+```
+
+## 🚀 Quick Deployment
+
+If you have GitHub CLI installed:
+
+```bash
+gh repo create vibhu2208/Dualis --public --source=. --remote=origin --push
+```
+
+Or manually:
+1. Create new repository on GitHub: https://github.com/vibhu2208/Dualis
+2. Run the git commands above
+3. Enable GitHub Pages in Settings > Pages
+4. Your site will be live at: https://vibhu2208.github.io/Dualis/
+
 ## 📄 License
 
 This project is created for demonstration purposes. All assets and content are property of their respective owners.
