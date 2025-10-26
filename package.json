@@ -1,0 +1,26 @@
+{
+  "name": "the-dualis-website",
+  "version": "1.0.0",
+  "description": "Luxury Real Estate Website for The Dualis by Kreeva India & Shapoorji Pallonji",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "serve": "npx http-server -p 8000 -c-1"
+  },
+  "keywords": [
+    "luxury",
+    "real-estate",
+    "website",
+    "responsive",
+    "gsap",
+    "animations",
+    "kreeva-india",
+    "shapoorji-pallonji"
+  ],
+  "author": "The Dualis Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

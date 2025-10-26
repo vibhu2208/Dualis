@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dualis - Reimagining Luxury. Reshaping Skylines.</title>
+    <meta name="description" content="3 & 4 BHK Ultra-Luxury Residences in Sector 46, Gurugram by Kreeva India & Shapoorji Pallonji Real Estate">
+
+    <!-- Prevent browser auto-scrolling to anchors -->
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="public/kareva_logo.webp" alt="The Dualis Logo" class="logo-img">
+                
+            </div>
+            
+            <div class="nav-phone">
+                <a href="tel:+919811750130" class="phone-btn">
+                    <span class="phone-icon">📞</span>
+                    <span class="phone-number">9811750130</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="public/videobanner.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-logo">
+            <img src="public/logo2.webp" alt="The Dualis Logo" class="hero-logo-img">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="section-title">About The Dualis</h2>
+                <p class="about-text">
+                    The Dualis represents the pinnacle of luxury living, a collaborative masterpiece by Kreeva India and Shapoorji Pallonji Real Estate. 
+                    Nestled in the heart of Sector 46, Gurugram, this architectural marvel redefines sophistication with 198 exclusive 3 & 4 BHK residences 
+                    across two iconic towers. Every detail has been meticulously crafted to offer an unparalleled living experience that seamlessly blends 
+                    modern elegance with timeless luxury.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">198</span>
+                        <span class="stat-label">Residences</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Towers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3-4</span>
+                        <span class="stat-label">BHK Options</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="public/bg2.webp" alt="The Dualis Architecture" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="highlights">
+        <div class="highlights-container">
+            <h2 class="section-title">Project Highlights</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <img src="public/highlight1.webp" alt="Premium Architecture">
+                    </div>
+                    <h3>Premium Architecture</h3>
+                    <p>Contemporary design with sophisticated aesthetics</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <img src="public/highlight2.webp" alt="Spacious Layouts">
+                    </div>
+                    <h3>Spacious Layouts</h3>
+                    <p>Optimized floor plans maximizing natural light</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <img src="public/highlight3.webp" alt="Luxury Finishes">
+                    </div>
+                    <h3>Luxury Finishes</h3>
+                    <p>Premium materials and exquisite craftsmanship</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <img src="public/highlight4.webp" alt="Smart Features">
+                    </div>
+                    <h3>Smart Features</h3>
+                    <p>Modern automation and intelligent systems</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <img src="public/highlight5.webp" alt="Prime Location">
+                    </div>
+                    <h3>Prime Location</h3>
+                    <p>Sector 46, Gurugram's most coveted address</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <img src="public/highlight1.webp" alt="World-class Amenities">
+                    </div>
+                    <h3>World-class Amenities</h3>
+                    <p>Comprehensive lifestyle and wellness facilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="location-container">
+            <div class="location-content">
+                <h2 class="section-title">Prime Location</h2>
+                <p class="location-subtitle">Sector 46, Gurugram - Where connectivity meets convenience</p>
+                <div class="location-advantages">
+                    <div class="location-item">
+                        <div class="location-icon">
+                            <img src="public/location1.webp" alt="Medanta Hospital">
+                        </div>
+                        <div class="location-info">
+                            <h4>Medanta - The Medicity</h4>
+                            <p>5 minutes</p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-icon">
+                            <img src="public/location2.webp" alt="NH-8 Highway">
+                        </div>
+                        <div class="location-info">
+                            <h4>NH-8 Expressway</h4>
+                            <p>8 minutes</p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-icon">
+                            <img src="public/location3.webp" alt="IKEA Store">
+                        </div>
+                        <div class="location-info">
+                            <h4>IKEA</h4>
+                            <p>10 minutes</p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-icon">
+                            <img src="public/location4.webp" alt="Golf Course">
+                        </div>
+                        <div class="location-info">
+                            <h4>Golf Course Extension</h4>
+                            <p>12 minutes</p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-icon">
+                            <img src="public/location5.webp" alt="Metro Station">
+                        </div>
+                        <div class="location-info">
+                            <h4>Metro Station</h4>
+                            <p>15 minutes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="location-map">
+                <img src="public/master.webp" alt="Location Map" loading="lazy">
+                <div class="map-overlay">
+                    <div class="map-marker"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="amenities">
+        <div class="amenities-container">
+            <h2 class="section-title">World-Class Amenities</h2>
+            <div class="amenities-carousel">
+                <div class="amenity-slide active">
+                    <div class="amenity-image">
+                        <img src="public/gallery1.webp" alt="Clubhouse">
+                    </div>
+                    <div class="amenity-content">
+                        <h3>Grand Clubhouse</h3>
+                        <p>State-of-the-art recreational facility</p>
+                    </div>
+                </div>
+                <div class="amenity-slide">
+                    <div class="amenity-image">
+                        <img src="public/gallery2.webp" alt="Fitness Center">
+                    </div>
+                    <div class="amenity-content">
+                        <h3>Fitness Center</h3>
+                        <p>Modern gym with latest equipment</p>
+                    </div>
+                </div>
+                <div class="amenity-slide">
+                    <div class="amenity-image">
+                        <img src="public/gallery3.webp" alt="Spa & Wellness">
+                    </div>
+                    <div class="amenity-content">
+                        <h3>Spa & Wellness</h3>
+                        <p>Rejuvenating spa and wellness center</p>
+                    </div>
+                </div>
+                <div class="amenity-slide">
+                    <div class="amenity-image">
+                        <img src="public/gallery4.webp" alt="Swimming Pool">
+                    </div>
+                    <div class="amenity-content">
+                        <h3>Infinity Pool</h3>
+                        <p>Temperature-controlled swimming pool</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-btn prev" onclick="changeSlide(-1)">&#8249;</button>
+                <button class="carousel-btn next" onclick="changeSlide(1)">&#8250;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interiors Section -->
+    <section id="interiors" class="interiors">
+        <div class="interiors-container">
+            <h2 class="section-title">Luxurious Interiors</h2>
+            <div class="interiors-grid">
+                <div class="interior-item large">
+                    <img src="public/unit1.webp" alt="Living Room" loading="lazy">
+                    <div class="interior-overlay">
+                        <h3>Grand Living Spaces</h3>
+                    </div>
+                </div>
+                <div class="interior-item">
+                    <img src="public/unit2.webp" alt="Master Bedroom" loading="lazy">
+                    <div class="interior-overlay">
+                        <h3>Master Suite</h3>
+                    </div>
+                </div>
+                <div class="interior-item">
+                    <img src="public/gallery5.webp" alt="Kitchen" loading="lazy">
+                    <div class="interior-overlay">
+                        <h3>Designer Kitchen</h3>
+                    </div>
+                </div>
+                <div class="interior-item">
+                    <img src="public/gallery6.webp" alt="Bathroom" loading="lazy">
+                    <div class="interior-overlay">
+                        <h3>Luxury Bathroom</h3>
+                    </div>
+                </div>
+                <div class="interior-item">
+                    <img src="public/gallery7.webp" alt="Balcony" loading="lazy">
+                    <div class="interior-overlay">
+                        <h3>Private Balcony</h3>
+                    </div>
+                </div>
+                <div class="interior-item large">
+                    <img src="public/gallery8.webp" alt="Dining Area" loading="lazy">
+                    <div class="interior-overlay">
+                        <h3>Elegant Dining</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developers Section -->
+    <section id="developers" class="developers">
+        <div class="developers-container">
+            <h2 class="section-title">Our Legacy Partners</h2>
+            <div class="developers-grid">
+                <div class="developer-card">
+                    <div class="developer-logo">
+                        <img src="public/kareva_logo.webp" alt="Kreeva India">
+                    </div>
+                    <h3>Kreeva India</h3>
+                    <p>
+                        A visionary real estate developer committed to creating exceptional living spaces 
+                        that blend innovation with elegance. With a focus on quality craftsmanship and 
+                        sustainable development, Kreeva India brings decades of expertise to every project.
+                    </p>
+                </div>
+                <div class="developer-card">
+                    <div class="developer-logo">
+                        <img src="public/logo2.webp" alt="Shapoorji Pallonji">
+                    </div>
+                    <h3>Shapoorji Pallonji Real Estate</h3>
+                    <p>
+                        A name synonymous with trust and excellence in construction. With over 150 years 
+                        of legacy, Shapoorji Pallonji Real Estate has delivered iconic landmarks across 
+                        the globe, setting new benchmarks in luxury and quality.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="gallery-container">
+            <h2 class="section-title">Gallery & Master Plans</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="public/master.webp" alt="Master Plan" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Master Plan</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="public/gallery1.webp" alt="Clubhouse View" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Clubhouse</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="public/gallery2.webp" alt="Exterior View" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Architecture</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="public/gallery3.webp" alt="Amenities" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Amenities</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="public/gallery4.webp" alt="Landscape" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Landscaping</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="public/gallery5.webp" alt="Interior Design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Interiors</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-prev" onclick="changeLightboxSlide(-1)">&#8249;</button>
+        <button class="lightbox-next" onclick="changeLightboxSlide(1)">&#8250;</button>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-content">
+                <h2 class="section-title">Register Your Interest</h2>
+                <p class="contact-subtitle">Be among the first to experience luxury redefined</p>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message (Optional)"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Register Interest</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/kareva_logo.webp" alt="The Dualis Logo">
+                        <span>The Dualis</span>
+                    </div>
+                    <p>Sector 46, Gurugram</p>
+                    <p>By Kreeva India & Shapoorji Pallonji Real Estate</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 +91 9811750130</p>
+                    <p>📧 info@thedualis.com</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <p>HARERA No: [Number]</p>
+                    <p>📍 Sector 46, Gurugram, Haryana</p>
+                    <button class="btn-secondary">Download Brochure</button>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Dualis. All rights reserved. | Disclaimer: This website is for informational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <button class="btn-primary">Download Brochure</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
