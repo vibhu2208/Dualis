@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initContactForm();
     initScrollEffects();
     initFloatingCTA();
+    initFloorPlanTabs();
 });
 
 // GSAP Animations - REMOVED ALL ANIMATIONS
@@ -24,39 +25,26 @@ function initGSAPAnimations() {
 // Scroll effects
 function initScrollEffects() {
     // Navbar background on scroll
-    const navbar = document.querySelector('.navbar');
-    const logoText = document.querySelector('.logo-text');
-    const logoImg = document.querySelector('.logo-img');
-
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.backdropFilter = 'blur(10px)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-
-            // Change logo text and image for better visibility on white background
-            if (logoText) {
-                logoText.style.color = '#1a1a1a';
-                logoText.style.textShadow = 'none';
+    const navbar = document.getElementById('main-navbar');
+    const heroSection = document.querySelector('.hero');
+    
+    if (navbar && heroSection) {
+        const heroHeight = heroSection.offsetHeight;
+        const scrollThreshold = heroHeight * 0.3; // 30% of hero section height
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > scrollThreshold) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
-            if (logoImg) {
-                logoImg.style.filter = 'brightness(1) contrast(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))';
-            }
-        } else {
-            navbar.style.background = 'transparent';
-            navbar.style.backdropFilter = 'none';
-            navbar.style.boxShadow = 'none';
-
-            // Change logo text and image back for transparent background
-            if (logoText) {
-                logoText.style.color = '#ffffff';
-                logoText.style.textShadow = '0 2px 4px rgba(0, 0, 0, 0.3)';
-            }
-            if (logoImg) {
-                logoImg.style.filter = 'brightness(1.1) contrast(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))';
-            }
+        });
+        
+        // Initial check in case page is loaded scrolled down
+        if (window.scrollY > scrollThreshold) {
+            navbar.classList.add('scrolled');
         }
-    });
+    }
 }
 function initCarousel() {
     const slides = document.querySelectorAll('.amenity-slide');
@@ -268,15 +256,7 @@ function initContactForm() {
     }
 }
 
-// Scroll effects - REMOVED ALL SCROLL ANIMATIONS
-function initScrollEffects() {
-    // All scroll effects and animations removed as requested
-    // No navbar background changes on scroll
-    // No parallax effects
-    // No scroll indicators
-    // No logo color changes
-    // No opacity changes
-}
+// Scroll effects already defined above
 
 // Floating CTA functionality - ALWAYS VISIBLE
 function initFloatingCTA() {
@@ -308,3 +288,30 @@ function initFloatingCTA() {
 // Performance optimization - lazy loading images - REMOVED
 
 // Add CSS for mobile menu - REMOVED
+
+// Floor Plan Tabs
+function initFloorPlanTabs() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const planTabs = document.querySelectorAll('.plan-tab');
+    
+    if (tabBtns.length && planTabs.length) {
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                tabBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get the plan type from data attribute
+                const planType = this.getAttribute('data-plan');
+                
+                // Hide all plan tabs
+                planTabs.forEach(tab => tab.classList.remove('active'));
+                
+                // Show the selected plan tab
+                document.getElementById(`${planType}-plan`).classList.add('active');
+            });
+        });
+    }
+}

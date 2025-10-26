@@ -21,11 +21,11 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="main-navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <img src="public/kareva_logo.webp" alt="The Dualis Logo" class="logo-img">
-                
+                <img src="public/logo2.webp" alt="The Dualis Logo Alternate" class="logo-img-alt">
             </div>
             
             <div class="nav-phone">
@@ -360,6 +360,157 @@
                     <img src="public/gallery5.webp" alt="Interior Design" loading="lazy">
                     <div class="gallery-overlay">
                         <span>Interiors</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floor Plan Section -->
+    <section id="floor-plans" class="floor-plans">
+        <div class="floor-plans-container">
+            <h2 class="section-title">Floor Plans</h2>
+            <p class="floor-plans-subtitle">Thoughtfully designed spaces for modern luxury living</p>
+            
+            <div class="floor-plans-tabs">
+                <button class="tab-btn active" data-plan="3bhk">3 BHK</button>
+                <button class="tab-btn" data-plan="4bhk">4 BHK</button>
+            </div>
+            
+            <div class="floor-plans-content">
+                <div class="plan-tab active" id="3bhk-plan">
+                    <div class="plan-grid">
+                        <div class="plan-card">
+                            <div class="plan-image">
+                                <img src="public/gallery1.webp" alt="3 BHK Type A" loading="lazy">
+                                <div class="plan-overlay">
+                                    <span class="plan-size">1850 sq.ft.</span>
+                                </div>
+                            </div>
+                            <div class="plan-details">
+                                <h3>Type A - Premium</h3>
+                                <ul class="plan-features">
+                                    <li>3 Bedrooms + 3 Bathrooms</li>
+                                    <li>Spacious Living & Dining</li>
+                                    <li>Modern Kitchen with Utility</li>
+                                    <li>Private Balcony</li>
+                                </ul>
+                                <button class="btn-primary">Download Plan</button>
+                            </div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-image">
+                                <img src="public/gallery2.webp" alt="3 BHK Type B" loading="lazy">
+                                <div class="plan-overlay">
+                                    <span class="plan-size">1950 sq.ft.</span>
+                                </div>
+                            </div>
+                            <div class="plan-details">
+                                <h3>Type B - Luxury</h3>
+                                <ul class="plan-features">
+                                    <li>3 Bedrooms + 3 Bathrooms</li>
+                                    <li>Expansive Living Area</li>
+                                    <li>Designer Kitchen</li>
+                                    <li>2 Private Balconies</li>
+                                </ul>
+                                <button class="btn-primary">Download Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="plan-tab" id="4bhk-plan">
+                    <div class="plan-grid">
+                        <div class="plan-card">
+                            <div class="plan-image">
+                                <img src="public/gallery3.webp" alt="4 BHK Type A" loading="lazy">
+                                <div class="plan-overlay">
+                                    <span class="plan-size">2350 sq.ft.</span>
+                                </div>
+                            </div>
+                            <div class="plan-details">
+                                <h3>Type A - Royal</h3>
+                                <ul class="plan-features">
+                                    <li>4 Bedrooms + 4 Bathrooms</li>
+                                    <li>Grand Living & Dining</li>
+                                    <li>Gourmet Kitchen with Pantry</li>
+                                    <li>Multiple Balconies</li>
+                                </ul>
+                                <button class="btn-primary">Download Plan</button>
+                            </div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-image">
+                                <img src="public/gallery4.webp" alt="4 BHK Type B" loading="lazy">
+                                <div class="plan-overlay">
+                                    <span class="plan-size">2500 sq.ft.</span>
+                                </div>
+                            </div>
+                            <div class="plan-details">
+                                <h3>Type B - Imperial</h3>
+                                <ul class="plan-features">
+                                    <li>4 Bedrooms + 4.5 Bathrooms</li>
+                                    <li>Entertainment Lounge</li>
+                                    <li>Chef's Kitchen</li>
+                                    <li>Private Terrace</li>
+                                </ul>
+                                <button class="btn-primary">Download Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Master & Unit Plans Section -->
+    <section id="master-plans" class="master-plans">
+        <div class="master-plans-container">
+            <h2 class="section-title">Master & Unit Plans</h2>
+            <p class="master-plans-subtitle">Explore the architectural brilliance of The Dualis</p>
+            
+            <div class="master-plans-grid">
+                <div class="master-plan-item">
+                    <div class="master-plan-image">
+                        <img src="public/master.webp" alt="Master Layout" loading="lazy">
+                    </div>
+                    <div class="master-plan-content">
+                        <h3>Master Layout</h3>
+                        <p>A comprehensive view of The Dualis development showcasing the strategic placement of towers, amenities, and green spaces.</p>
+                        <button class="btn-primary">View Full Plan</button>
+                    </div>
+                </div>
+                
+                <div class="master-plan-item">
+                    <div class="master-plan-image">
+                        <img src="public/gallery5.webp" alt="Tower A Layout" loading="lazy">
+                    </div>
+                    <div class="master-plan-content">
+                        <h3>Tower A Layout</h3>
+                        <p>Detailed floor-by-floor plan of Tower A featuring unit distributions and common areas.</p>
+                        <button class="btn-primary">View Full Plan</button>
+                    </div>
+                </div>
+                
+                <div class="master-plan-item">
+                    <div class="master-plan-image">
+                        <img src="public/gallery6.webp" alt="Tower B Layout" loading="lazy">
+                    </div>
+                    <div class="master-plan-content">
+                        <h3>Tower B Layout</h3>
+                        <p>Detailed floor-by-floor plan of Tower B featuring unit distributions and common areas.</p>
+                        <button class="btn-primary">View Full Plan</button>
+                    </div>
+                </div>
+                
+                <div class="master-plan-item">
+                    <div class="master-plan-image">
+                        <img src="public/gallery7.webp" alt="Amenities Layout" loading="lazy">
+                    </div>
+                    <div class="master-plan-content">
+                        <h3>Amenities Layout</h3>
+                        <p>Detailed plan of the clubhouse, recreational areas, and outdoor spaces designed for luxury living.</p>
+                        <button class="btn-primary">View Full Plan</button>
                     </div>
                 </div>
             </div>

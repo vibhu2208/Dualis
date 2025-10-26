@@ -1,14 +1,14 @@
 /* CSS Variables */
 :root {
-    /* Colors - Luxury Theme */
-    --color-primary: #1a1a1a; /* Charcoal Black */
-    --color-secondary: #ffffff; /* White */
-    --color-accent: #d4af37; /* Gold */
-    --color-accent-light: #f4e8c1; /* Champagne Beige */
-    --color-text: #333333;
+    /* Colors - Burgundy Theme */
+    --color-primary: #43212A; /* Dark Burgundy */
+    --color-secondary: #f8f8f8; /* Light Gray */
+    --color-accent: #43212A; /* Dark Burgundy - same as primary */
+    --color-accent-light: #f8f8f8; /* Light Gray - same as secondary */
+    --color-text: #2c2c2c;
     --color-text-light: #666666;
-    --color-overlay: rgba(0, 0, 0, 0.4);
-    --color-overlay-light: rgba(0, 0, 0, 0.6);
+    --color-overlay: rgba(67, 33, 42, 0.4);
+    --color-overlay-light: rgba(67, 33, 42, 0.6);
     
     /* Typography */
     --font-primary: 'Playfair Display', serif;
@@ -109,6 +109,17 @@ p {
     backdrop-filter: none;
     z-index: 1000;
     padding: var(--spacing-sm) 0;
+    transition: all 0.4s ease;
+    height: auto;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar.scrolled {
+    background: var(--color-primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-xs) 0;
 }
 
 .nav-container {
@@ -118,18 +129,68 @@ p {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.navbar.scrolled .nav-container {
+    justify-content: center;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
+    transition: all 0.4s ease;
+}
+
+.navbar.scrolled .nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navbar.scrolled .nav-phone {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navbar.scrolled .logo-img-alt {
+    height: 50px;
+    width: auto;
+    opacity: 1;
+    pointer-events: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .logo-img {
-    height: 40px;
+    height: 70px;
     width: auto;
     filter: brightness(1.1) contrast(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    transition: all 0.4s ease;
+}
+
+.navbar.scrolled .logo-img {
+    height: 60px;
+    opacity: 0;
+}
+
+.logo-img-alt {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    filter: brightness(1.1) contrast(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    transition: all 0.4s ease;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .logo-text {
@@ -149,13 +210,14 @@ p {
 .nav-phone {
     display: flex;
     align-items: center;
+    transition: all 0.4s ease;
 }
 
 .phone-btn {
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
-    background: var(--color-accent);
+    background: #D4AF37 !important; /* Golden background */
     color: var(--color-primary);
     text-decoration: none;
     padding: 10px 20px;
@@ -167,17 +229,20 @@ p {
 }
 
 .phone-btn:hover {
-    background: var(--color-accent-light);
+    background: #B8860B !important; /* Darker golden hover */
     border-color: rgba(255, 255, 255, 0.3);
 }
 
 .phone-icon {
     font-size: 1.2rem;
+    color: #D4AF37 !important; /* Golden icon color */
 }
 
 .phone-number {
     font-family: var(--font-secondary);
     letter-spacing: 1px;
+    color: #D4AF37 !important; /* Golden text color */
+    font-weight: 600;
 }
 
 /* Buttons */
@@ -668,6 +733,205 @@ p {
     color: var(--color-secondary);
 }
 
+/* Floor Plans Section */
+.floor-plans {
+    padding: var(--spacing-xxl) 0;
+    background: var(--color-secondary);
+}
+
+.floor-plans-container {
+    padding: 0 var(--spacing-md);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.floor-plans-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text);
+}
+
+.floor-plans-tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.tab-btn {
+    padding: 10px 30px;
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.plan-tab {
+    display: none;
+}
+
+.plan-tab.active {
+    display: block;
+}
+
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.plan-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.plan-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.plan-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.plan-card:hover .plan-image img {
+    transform: scale(1.05);
+}
+
+.plan-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 8px 15px;
+    border-top-left-radius: 10px;
+}
+
+.plan-size {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.plan-details {
+    padding: var(--spacing-lg);
+}
+
+.plan-details h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+}
+
+.plan-features {
+    list-style: none;
+    margin-bottom: var(--spacing-lg);
+}
+
+.plan-features li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: var(--color-text-light);
+}
+
+.plan-features li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+/* Master & Unit Plans Section */
+.master-plans {
+    padding: var(--spacing-xxl) 0;
+    background: var(--color-accent-light);
+}
+
+.master-plans-container {
+    padding: 0 var(--spacing-md);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.master-plans-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text);
+}
+
+.master-plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.master-plan-item {
+    background: var(--color-secondary);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.master-plan-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.master-plan-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.master-plan-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.master-plan-item:hover .master-plan-image img {
+    transform: scale(1.05);
+}
+
+.master-plan-content {
+    padding: var(--spacing-lg);
+}
+
+.master-plan-content h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+
+.master-plan-content p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-light);
+}
+
 .gallery-container {
     padding: 0 var(--spacing-md);
 }
@@ -940,6 +1204,14 @@ p {
     .developers-grid {
         grid-template-columns: 1fr;
     }
+    
+    .plan-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .master-plans-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
@@ -1008,6 +1280,29 @@ p {
         bottom: var(--spacing-sm);
         right: var(--spacing-sm);
     }
+    
+    .floor-plans-tabs {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .tab-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .plan-image {
+        height: 200px;
+    }
+    
+    .master-plan-image {
+        height: 200px;
+    }
+    
+    .navbar.scrolled .nav-phone {
+        opacity: 0;
+        pointer-events: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1062,5 +1357,29 @@ p {
     
     .lightbox-next {
         right: var(--spacing-sm);
+    }
+    
+    .plan-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .plan-card {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .plan-image {
+        height: 180px;
+    }
+    
+    .master-plans-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .master-plan-image {
+        height: 180px;
+    }
+    
+    .navbar.scrolled .logo-img-alt {
+        height: 40px;
     }
 }
