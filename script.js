@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initCarousel();
     initLightbox();
     initContactForm();
-    initScrollEffects();
     initFloatingCTA();
     initFloorPlanTabs();
 });
@@ -22,30 +21,6 @@ function initGSAPAnimations() {
     // No animations applied to any elements
 }
 
-// Scroll effects
-function initScrollEffects() {
-    // Navbar background on scroll
-    const navbar = document.getElementById('main-navbar');
-    const heroSection = document.querySelector('.hero');
-    
-    if (navbar && heroSection) {
-        const heroHeight = heroSection.offsetHeight;
-        const scrollThreshold = heroHeight * 0.3; // 30% of hero section height
-        
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > scrollThreshold) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-        
-        // Initial check in case page is loaded scrolled down
-        if (window.scrollY > scrollThreshold) {
-            navbar.classList.add('scrolled');
-        }
-    }
-}
 function initCarousel() {
     const slides = document.querySelectorAll('.amenity-slide');
     const prevBtn = document.querySelector('.carousel-btn.prev');
