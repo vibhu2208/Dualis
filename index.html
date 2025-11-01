@@ -28,7 +28,7 @@
             
             <div class="nav-phone">
                 <a href="tel:+919811750130" class="phone-btn">
-                    <span class="phone-icon">📞</span>
+                    <!-- <span class="phone-icon">📞</span> -->
                     <span class="phone-number">9811750130</span>
                 </a>
             </div>
@@ -131,64 +131,110 @@
         </div>
     </section>
 
-    <!-- Location Section -->
-    <section id="location" class="location">
-        <div class="location-container">
-            <div class="location-content">
-                <h2 class="section-title">Prime Location</h2>
-                <p class="location-subtitle">Sector 46, Gurugram - Where connectivity meets convenience</p>
-                <div class="location-advantages">
-                    <div class="location-item">
-                        <div class="location-icon">
-                            <img src="public/location1.webp" alt="Medanta Hospital">
-                        </div>
-                        <div class="location-info">
-                            <h4>Medanta - The Medicity</h4>
-                            <p>5 minutes</p>
-                        </div>
+    <!-- Nearby Highlights Section -->
+    <section id="highlights" class="highlights">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nearby Highlights</h2>
+                <p class="section-subtitle">Discover premium destinations just minutes away from your future home</p>
+                <div class="accent-line"></div>
+            </div>
+            
+            <div class="highlights-grid">
+                <!-- Card 1 -->
+                <div class="highlight-card" style="--card-height: 360px">
+                    <div class="card-bg">
+                        <img src="public/location1.webp" alt="Medanta Hospital" loading="lazy">
                     </div>
-                    <div class="location-item">
-                        <div class="location-icon">
-                            <img src="public/location2.webp" alt="NH-8 Highway">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-badge">
+                            <span class="material-icons">location_on</span>
+                            <span>5 min</span>
                         </div>
-                        <div class="location-info">
-                            <h4>NH-8 Expressway</h4>
-                            <p>8 minutes</p>
-                        </div>
-                    </div>
-                    <div class="location-item">
-                        <div class="location-icon">
-                            <img src="public/location3.webp" alt="IKEA Store">
-                        </div>
-                        <div class="location-info">
-                            <h4>IKEA</h4>
-                            <p>10 minutes</p>
-                        </div>
-                    </div>
-                    <div class="location-item">
-                        <div class="location-icon">
-                            <img src="public/location4.webp" alt="Golf Course">
-                        </div>
-                        <div class="location-info">
-                            <h4>Golf Course Extension</h4>
-                            <p>12 minutes</p>
-                        </div>
-                    </div>
-                    <div class="location-item">
-                        <div class="location-icon">
-                            <img src="public/location5.webp" alt="Metro Station">
-                        </div>
-                        <div class="location-info">
-                            <h4>Metro Station</h4>
-                            <p>15 minutes</p>
-                        </div>
+                        <h3 class="card-title">Medanta - The Medicity</h3>
+                        <p class="card-desc">Asia's leading multi-specialty hospital</p>
                     </div>
                 </div>
-            </div>
-            <div class="location-map">
-                <img src="public/master.webp" alt="Location Map" loading="lazy">
-                <div class="map-overlay">
-                    <div class="map-marker"></div>
+
+                <!-- Card 2 -->
+                <div class="highlight-card" style="--card-height: 320px">
+                    <div class="card-bg">
+                        <img src="public/location2.webp" alt="NH-8 Highway" loading="lazy">
+                    </div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-badge">
+                            <span class="material-icons">directions_car</span>
+                            <span>8 min</span>
+                        </div>
+                        <h3 class="card-title">NH-8 Expressway</h3>
+                        <p class="card-desc">Seamless connectivity to Delhi & beyond</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="highlight-card" style="--card-height: 340px">
+                    <div class="card-bg">
+                        <img src="public/location3.webp" alt="IKEA Store" loading="lazy">
+                    </div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-badge">
+                            <span class="material-icons">shopping_cart</span>
+                            <span>10 min</span>
+                        </div>
+                        <h3 class="card-title">IKEA & Retail Hub</h3>
+                        <p class="card-desc">Premier shopping & dining destination</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="highlight-card" style="--card-height: 320px">
+                    <div class="card-bg">
+                        <img src="public/location4.webp" alt="Golf Course" loading="lazy">
+                    </div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-badge">
+                            <span class="material-icons">sports_golf</span>
+                            <span>12 min</span>
+                        </div>
+                        <h3 class="card-title">Golf Course Road</h3>
+                        <p class="card-desc">Luxury living at its finest</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="highlight-card" style="--card-height: 360px">
+                    <div class="card-bg">
+                        <img src="public/location5.webp" alt="Metro Station" loading="lazy">
+                    </div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-badge">
+                            <span class="material-icons">directions_subway</span>
+                            <span>15 min</span>
+                        </div>
+                        <h3 class="card-title">Metro Station</h3>
+                        <p class="card-desc">Quick access to Delhi Metro network</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="highlight-card" style="--card-height: 340px">
+                    <div class="card-bg">
+                        <img src="public/location1.webp" alt="DLF Cyber City" loading="lazy">
+                    </div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-badge">
+                            <span class="material-icons">business</span>
+                            <span>18 min</span>
+                        </div>
+                        <h3 class="card-title">DLF Cyber City</h3>
+                        <p class="card-desc">Gurgaon's premier business district</p>
+                    </div>
                 </div>
             </div>
         </div>
